@@ -1,151 +1,112 @@
 MedChain: Secure Blockchain-based Medical Record System
 
-Overview
+🔍 Overview
 
-MedChain is a secure, decentralized medical record management system built using Hyperledger Fabric. It ensures patient data privacy, seamless doctor-patient communication, and fraud detection using AI.
+MedChain is a decentralized medical record system using Hyperledger Fabric for data privacy, secure doctor-patient communication, and AI-driven fraud detection.
 
-Tech Stack
+🛠 Tech Stack
 
-🔗 Blockchain Layer (Hyperledger Fabric)
+🔗 Blockchain
 
-Hyperledger Fabric – Private, permissioned blockchain for secure medical record storage.
+Hyperledger Fabric – Secure, private blockchain
 
-Chaincode (Smart Contracts) – Written in Python (using Hyperledger Fabric SDK) to manage patient data access.
+Chaincode (Python) – Smart contracts for data access
 
-Hyperledger CA (Certificate Authority) – Handles identity management & access control.
+Hyperledger CA – Identity & access control
 
-Web3.py – Python library for interacting with blockchain (MetaMask authentication, transactions).
+Web3.py – Blockchain interactions (MetaMask, transactions)
 
 ⚙ Backend (Flask API)
 
-Flask (Python) – Lightweight web framework to handle requests & interact with blockchain.
+Flask – Lightweight API framework
 
-Flask-RESTful – API development for secure patient-doctor communication.
+Flask-RESTful – Secure communication
 
-Web3.py – For blockchain interaction.
+Web3.py – Blockchain integration
 
-Flask-SocketIO – Real-time secure chat system.
+Flask-SocketIO – Real-time chat
 
-MongoDB – NoSQL database for metadata (user profiles, logs, chat history).
+MongoDB – NoSQL storage for metadata
 
-IPFS (InterPlanetary File System) – Decentralized storage for medical records.
+IPFS – Decentralized file storage
 
-scikit-learn (AI for Anomaly Detection) – Isolation Forest to detect fraudulent access patterns.
+scikit-learn – AI fraud detection
 
 🎨 Frontend (React.js)
 
-React.js – Fast, dynamic user interface.
+React.js – Fast, dynamic UI
 
-Redux Toolkit – State management for seamless UI experience.
+Redux Toolkit – State management
 
-Web3.js / Ethers.js – For integrating MetaMask-based authentication.
+Web3.js / Ethers.js – MetaMask authentication
 
-Chart.js / Recharts – For interactive patient health analytics.
+Chart.js / Recharts – Interactive analytics
 
-Material-UI / TailwindCSS – Modern dark-themed UI.
+Material-UI / TailwindCSS – Modern dark-themed UI
 
-🔐 Authentication & Security
+🔐 Security
 
-MetaMask & Web3 Authentication – Secure blockchain-based login.
+MetaMask & Web3 – Secure blockchain login
 
-JWT (JSON Web Tokens) – API security.
+JWT – API security
 
-AES-256 Encryption – End-to-end encryption for chat & medical records.
+AES-256 Encryption – Secure chat & records
 
-OAuth 2.0 – Optional for external integrations.
+OAuth 2.0 – Optional integrations
 
 🚀 DevOps & Deployment
 
-Docker & Docker Compose – To set up Hyperledger Fabric network & backend services.
+Docker & Docker Compose – Blockchain & backend setup
 
-Kubernetes (Optional) – For scaling the application.
+Kubernetes (Optional) – Scaling support
 
-AWS / Google Cloud / Azure – Hosting blockchain nodes & backend services.
+AWS / GCP / Azure – Hosting
 
-IPFS Pinning Services – Filecoin, Infura, or Pinata for storing medical reports securely.
+IPFS Pinning – Secure file storage (Filecoin, Infura, Pinata)
 
-Installation & Setup
+⚡ Installation & Setup
 
 Prerequisites
 
-Docker & Docker Compose
+🐳 Docker & Docker Compose
 
-Node.js & npm
+🔧 Node.js & npm
 
-Python 3.8+
+🐍 Python 3.8+
 
-MongoDB
+🗄️ MongoDB
 
-IPFS
+🌍 IPFS
 
 Steps
 
-Clone the Repository:
-
+Clone the Repo:
 
 Set up Hyperledger Fabric:
 
-cd blockchain
-./network.sh up createChannel -c mychannel -ca
+Deploy Chaincode:
 
-Install Chaincode:
-
-./network.sh deployCC -ccn medchain -ccp ./chaincode/ -ccl python
-
-Start Backend Services:
-
-cd backend
-pip install -r requirements.txt
-python app.py
+Start Backend:
 
 Start Frontend:
 
-cd frontend
-npm install
-npm start
+🔗 API Endpoints
 
-API Endpoints
+POST /auth/login – Login with MetaMask
 
-Method
+GET /patient/data – Retrieve patient records
 
-Endpoint
+POST /doctor/update – Update records
 
-Description
+GET /chat/messages – Fetch chat history
 
-POST
+POST /chat/send – Send encrypted messages
 
-/auth/login
+🤝 Contributing
 
-Login using MetaMask
+Pull requests are welcome! Open an issue for major changes.
 
-GET
+📜 License
 
-/patient/data
+Licensed under MIT.
 
-Retrieve patient medical data
-
-POST
-
-/doctor/update
-
-Update patient records
-
-GET
-
-/chat/messages
-
-Fetch chat history
-
-POST
-
-/chat/send
-
-Send encrypted messages
-
-Contributing
-
-Pull requests are welcome. For major changes, open an issue first to discuss the changes.
-
-License
-
-This project is licensed under the MIT License.
