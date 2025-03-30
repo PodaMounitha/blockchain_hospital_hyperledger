@@ -82,8 +82,6 @@ Steps
 
 Clone the Repository:
 
-git clone https://github.com/yourrepo/medchain.git
-cd medchain
 
 Set up Hyperledger Fabric:
 
